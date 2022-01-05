@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+char table[41][41];
+int main()
+{
+    int n,t,i,k,j;
+
+    cin>>t;
+    while(t--)
+    {
+        string s,s1="",s2="";
+        cin>>s;
+        int l=s.size();
+        for(i=0;i<l/2;i++)s1+=s[i];
+        for(i=l/2;i<l;i++)s2+=s[i];
+      if(s1==s2) cout<<"YES"<<endl;
+      else cout<<"NO"<<endl;
+
+
+
+    }
+    return 0;
+}
