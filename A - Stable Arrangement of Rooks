@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+char table[41][41];
+int main()
+{
+    int n,t,i,k,j;
+
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>k;
+       if((n%2==0&&k<=n/2)||(n%2==1&&k<=n/2+1))
+            {
+
+            for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        table[i][j] = '.';
+
+                }
+        }
+        int temp =0;
+        for(i=0;i<n;i=i+2) {
+                temp++;
+                for(j=0;j<n;j++) {
+
+                        if(i==j&&temp<=k)
+                        {
+                                table[i][j] = 'R';
+
+                        }
+                }
+        }
+
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        cout<<table[i][j];
+                }
+                cout<<endl;
+        }
+
+
+            }
+            else cout<<-1<<endl;
+
+
+    }
+    return 0;
+}
