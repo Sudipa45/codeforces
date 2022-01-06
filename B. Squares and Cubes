@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,t,i;
+   // freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+   cin>>t;
+   while(t--)
+{
+    cin>>n;
+     map<int,int>mp;
+    for(i=1;i<=sqrt(n);i++)
+    {
+        if(mp.find(i*i)==mp.end())mp[i*i]++;
+    }
+    for(i=1;i<=cbrt(n);i++)
+    {
+         if(mp.find(i*i*i)==mp.end())mp[i*i*i]++;
+    }
+    cout<<mp.size()<<endl;
+
+}
+
+
+
+
+    return 0;
+}
