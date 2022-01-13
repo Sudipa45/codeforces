@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>//robot cleaner cf
+using namespace std;
+int main()
+{
+int t;
+// freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+   cin>>t;
+while(t--)
+{
+    int count=0,count1=0,n,m,ir,ic,dr,dc;
+    cin>>n>>m>>ir>>ic>>dr>>dc;
+
+     if(dc>ic)count=dc-ic;
+     if(dc<ic)count=(m-ic)+(m-dc);
+    if(dr>ir)count1=dr-ir;
+     if(dr<ir) count1=(n-ir)+(n-dr);
+
+    cout<<min(count,count1)<<endl;
+
+}
+
+
+
+
+    return 0;
+}
