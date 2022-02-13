@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,arr,i,t,a;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        vector<int> v;
+        for (int i = 1; i <= n; i++)
+       {
+           cin>>a;
+            v.push_back(a);
+       }
+      if (!is_sorted(v.begin(), v.end()))
+            cout << "YES"<<endl;
+        else
+            cout << "NO"<<endl;
+
+    }
+    return 0;
+}
