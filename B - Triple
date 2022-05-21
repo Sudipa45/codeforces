@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,n,i,s,trace;
+    //init_code();
+   cin>>t;
+    while(t--)
+    {
+int f=0;
+    cin>>n;
+     map<int,int>mp;
+     for(i=1;i<=n;i++)
+    {
+        cin>>s;
+        mp[s]++;
+    }
+    for (auto it1 = mp.begin(); it1!=mp.end(); ++it1)
+        {if(it1->second>=3){f=1;trace=it1->first;}
+
+        }
+        if(f==1)cout<<trace<<endl;
+ else cout<<-1<<endl;
+}
+return 0;
+}
