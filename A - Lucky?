@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  long long t,i,sum,remainder,j,sum1;
+  cin >> t;
+  while (t--) {
+
+        long long n;
+        cin>>n;
+
+
+sum=0,i=1,sum1=0;
+      for(j=n;j!=0;)
+      {
+          remainder=j%10;
+          if(i<=3)sum=sum+remainder;
+          else sum1+=remainder;
+          j=j/10;
+i++;
+      }
+
+
+
+if(sum==sum1)
+   cout<<"yes"<<endl;
+   else   cout<<"no"<<endl;
+}
+  return 0;
+}
